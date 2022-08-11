@@ -12,7 +12,8 @@
 }
 
 #button-addon2,
-.btn-close {
+.btn-close,
+#busqueda {
 	position: relative;
 	font-size: 17px;
 	text-transform: uppercase;
@@ -29,18 +30,20 @@
 }
 
 #button-addon2:hover,
-.btn-close:hover {
+.btn-close:hover,
+#busqueda:hover {
 	transform: translateY(-3px);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 #button-addon2:active,
-.btn-close:active {
+.btn-close:active,
+#busqueda:active {
 	transform: translateY(-1px);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#button-addon2::after,
+/* #button-addon2::after,
 .btn-close::after {
 	content: '';
 	display: inline-block;
@@ -62,4 +65,19 @@
 .btn-close:hover::after {
 	transform: scaleX(1.4) scaleY(1.6);
 	opacity: 0;
+} */
+
+/* #busqueda {
+	border: none;
+	border-radius: 15px;
+	padding: 15px;
+	background-color: #fff;
+	box-shadow: 6px 6px 12px #ffffff, -6px -6px 12px #c5c5c5;
+	font-size: medium;
+	font-weight: bold;
 }
+
+#busqueda:focus {
+	outline-color: white;
+	place-content: 'Enter your message!';
+} */
