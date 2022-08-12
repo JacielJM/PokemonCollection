@@ -1,6 +1,5 @@
 const pokeCards = [];
 const poke = document.getElementById('busqueda');
-console.log(poke.value);
 const button = document.getElementById('button-addon2');
 button.addEventListener('click', (e) => {
 	e.preventDefault();
@@ -44,11 +43,12 @@ function buildCard(pokecard) {
 }
 function displayPokemon() {
 	let pokeContainer = document.querySelector('#gallery');
-	pokeContainer.innerHTML = '';
+	pokeContainer.innerHTML = ``;
 	for (let i = 0; i < pokeCards.length; i++) {
 		let result = buildCard(pokeCards[i]);
 		pokeContainer.appendChild(result);
 	}
-	document.querySelector('#busqueda').value = '';
+	document.querySelector('#busqueda').value = ``;
 }
-fetchPokemon();
+
+displayPokemon();
