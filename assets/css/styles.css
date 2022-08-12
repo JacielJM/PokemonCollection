@@ -11,23 +11,14 @@
 	padding-bottom: 25px;
 }
 
-#busqueda,
-.form-control {
-	min-width: 80%;
-}
-
-#button-addon2 {
-	max-width: 20%;
-}
-
 #button-addon2,
 .btn-close,
 #busqueda {
 	position: relative;
-	font-size: 17px;
+	font-size: 14px;
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 1em 0.5em;
+	padding: 15px 25px;
 	display: inline-block;
 	border-radius: 25px;
 	transition: all 0.2s;
