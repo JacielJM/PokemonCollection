@@ -52,8 +52,8 @@ function displayPokeCards() {
 
 function addPokecard(poke) {
 	fetch(`https://pokeapi.co/api/v2/pokemon/${poke.toLowerCase()}`)
-		.then((res) => res.json())
-		.then((data) => {
+		.then(res => res.json())
+		.then(data => {
 			nuevo = new PokeCard(data.name, data.sprites.front_default, data.id);
 			pokeCards.push(nuevo);
 		});

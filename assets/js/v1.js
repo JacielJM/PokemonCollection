@@ -2,15 +2,15 @@ const pokemon = document.getElementById('busqueda');
 const button = document.getElementById('button-addon2');
 const gallery = document.getElementById('gallery');
 
-button.addEventListener('click', (e) => {
+button.addEventListener('click', e => {
 	e.preventDefault();
 	fetchPokemon(pokemon.value);
 });
 
 function fetchPokemon(poke = undefined) {
 	fetch(`https://pokeapi.co/api/v2/pokemon/${poke.toLowerCase()}`)
-		.then((res) => res.json())
-		.then((data) => addPokemon(data));
+		.then(res => res.json())
+		.then(data => addPokemon(data));
 }
 
 function addPokemon(pokemon) {

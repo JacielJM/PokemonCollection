@@ -1,7 +1,7 @@
 const pokeCards = [];
 const poke = document.getElementById('busqueda');
 const button = document.getElementById('button-addon2');
-button.addEventListener('click', (e) => {
+button.addEventListener('click', e => {
 	e.preventDefault();
 	fetchPokemon(poke.value);
 });
@@ -17,8 +17,8 @@ class PokeCard {
 
 function fetchPokemon(poke) {
 	fetch(`https://pokeapi.co/api/v2/pokemon/${poke.toLowerCase()}`)
-		.then((res) => res.json())
-		.then((data) => pokeCards.push(new PokeCard(data)));
+		.then(res => res.json())
+		.then(data => pokeCards.push(new PokeCard(data)));
 	displayPokemon();
 }
 
