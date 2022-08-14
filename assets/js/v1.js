@@ -16,24 +16,25 @@ const setBackgroundColor = () => {
 
 // Pokémons
 
+const app = document.getElementById('app');
 const pokemon = document.getElementById('busqueda');
 const button = document.getElementById('button-addon2');
 const gallery = document.getElementById('gallery');
-const reset = document.getElementById('reset');
+const reset = document.getElementById('resetAll');
+const resetCards = document.getElementById('resetCards');
+const resetColors = document.getElementById('resetColors');
 const alerta = document.getElementById('alert');
 const randomColor = document.getElementById('randomColors');
 let cards = [];
 let crazy = false;
 
 randomColor.addEventListener('change', e => {
-	if (e.target.checked) crazy = true;
+	e.target.checked ? (crazy = true) : (crazy = false);
 });
 
 button.addEventListener('click', e => {
 	e.preventDefault();
-	if (crazy) {
-		setBackgroundColor();
-	}
+	if (crazy) setBackgroundColor();
 	fetchPokemon(pokemon.value);
 });
 
@@ -41,7 +42,9 @@ pokemon.addEventListener('keypress', e => {
 	if (e.key === 'Enter') button.click();
 });
 
-reset.addEventListener('click', clearPokemon);
+reset.addEventListener('click', clearAll);
+resetCards.addEventListener('click', clearCards);
+resetColors.addEventListener('click', clearColor);
 
 function fetchPokemon(poke = '') {
 	if (poke) {
@@ -118,11 +121,18 @@ function deleteCard(e) {
 	displayCards(cards);
 }
 
-function clearPokemon() {
+function clearColor() {
+	app.style.backgroundColor = 'rgb(233, 247, 244';
+}
+
+function clearCards() {
 	gallery.innerHTML = '';
 	cards = [];
-	document.getElementById('app').style.backgroundColor = 'rgb(233, 247, 244';
-	displayCards(cards);
+}
+
+function clearAll() {
+	clearCards();
+	clearColor();
 }
 
 displayCards();

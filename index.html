@@ -21,32 +21,35 @@
 
 <body>
 	<div id="app" class="container-fluid">
-		<br />
-		<h1 class="text-dark text-center fw-bold bg-light bg-opacity-50 rounded p-3">Pokémon Gallery</h1>
-		<br />
+		<h1 class="text-dark text-center fw-bold bg-light bg-opacity-75 rounded p-3">Pokémon Gallery</h1>
 		<div class="container">
 			<!-- input -->
-			<div class="input-group mb-2">
+			<div class="input-group mb-3">
 				<input id="busqueda" type="text" class="form-control" placeholder="Nombre o ID" required />
 				<button class="btn btn-outline-secondary" type="button" id="button-addon2">
 					Go!
 				</button>
 			</div>
-		</div>
-		<br />
-		<div class="form-check form-switch m-3">
-			<input class="form-check-input" type="checkbox" role="switch" id="randomColors">
-			<label class="form-check-label" for="randomColors"> Colores random</label>
-		</div>
-		<div class="container-fluid mx-auto">
-			<button class="d-flex btn btn-secondary mb-3" type="button" id="reset">
-				Reset All
-			</button>
+			<div class="d-flex justify-content-start container-fluid mx-auto">
+				<button class="btn btn-outline-success mb-3 me-2" type="button" id="resetCards">
+					Reset cards
+				</button>
+				<button class="btn btn-outline-info mb-3 mx-2" type="button" id="resetColors">
+					Reset colors
+				</button>
+				<button class="btn btn-outline-danger mb-3 mx-2" type="button" id="resetAll">
+					Reset All
+				</button>
+			</div>
+			<div class="form-check form-switch m-3">
+				<input class="form-check-input" type="checkbox" role="switch" id="randomColors">
+				<label class="form-check-label" for="randomColors"> Colores random</label>
+			</div>
 		</div>
 		<p class="col-6 mx-auto text-center text-light bg-dark bg-opacity-10 rounded p-3"><span id="alert">Atrápalos a
 				todos!</span>
 		</p>
-		<div id="gallery" class="row row-cols-2 row-cols-md-4 g-4 p-2">
+		<div id="gallery" class="row row-cols-2 row-cols-md-4 g-4 p-3">
 			<!-- <div class="col">
             <div class="card h-100">
                 <button type="button" class="btn-close" aria-label="Close"></button>

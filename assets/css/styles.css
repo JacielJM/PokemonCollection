@@ -4,6 +4,8 @@
 
 #app {
 	background-color: rgb(233, 247, 244);
+	/* rgb(220, 252, 187)
+	   rgb(127, 208, 230) */
 	min-height: 100vh;
 }
 
