@@ -18,7 +18,7 @@ class PokeCard {
 }
 
 function buildCard(pokecard, index) {
-	let divCol = document.createElement('div');
+	const divCol = document.createElement('div');
 	divCol.setAttribute('class', 'col');
 	divCol.setAttribute('id', index);
 
@@ -31,20 +31,20 @@ function buildCard(pokecard, index) {
                 </div>
             </div>`;
 	pokecard.borrar && deleteCard(index);
-	let equis = document.getElementById(`b${index}`);
+	const equis = document.getElementById(`b${index}`);
 	equis.addEventListener('click', borrar);
 	return divCol;
 }
 
 function buildCards(pokecards) {
-	let arr = pokecards.map((pokecard, index) => buildCard(pokecard, index));
+	const arr = pokecards.map((pokecard, index) => buildCard(pokecard, index));
 	return arr;
 }
 
 function displayPokeCards() {
-	let pokeContainer = document.querySelector('#gallery');
+	const pokeContainer = document.querySelector('#gallery');
 	document.querySelector('#busqueda').value = '';
-	let result = buildCards(pokeCards);
+	const result = buildCards(pokeCards);
 	for (let i = 0; i < result.length; i++) {
 		pokeContainer.appendChild(result[i]);
 	}

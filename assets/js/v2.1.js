@@ -28,7 +28,7 @@ function fetchPokemon(poke) {
 // }
 
 function buildCard(pokecard) {
-	let divCol = document.createElement('div');
+	const divCol = document.createElement('div');
 	divCol.setAttribute('class', 'col');
 
 	divCol.innerHTML += `<div class="card h-100">
@@ -42,10 +42,10 @@ function buildCard(pokecard) {
 	return divCol;
 }
 function displayPokemon() {
-	let pokeContainer = document.querySelector('#gallery');
+	const pokeContainer = document.querySelector('#gallery');
 	pokeContainer.innerHTML = ``;
 	for (let i = 0; i < pokeCards.length; i++) {
-		let result = buildCard(pokeCards[i]);
+		const result = buildCard(pokeCards[i]);
 		pokeContainer.appendChild(result);
 	}
 	document.querySelector('#busqueda').value = ``;
