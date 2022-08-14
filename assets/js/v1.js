@@ -65,7 +65,7 @@ function saveCard(card) {
 }
 
 function displayCards(cards = []) {
-	if (!cards.length) return;
+	if (!cards.length) gallery.innerHTML = '';
 	if (cards.length) {
 		gallery.innerHTML = '';
 		for (let i = 0; i < cards.length; i++) {
