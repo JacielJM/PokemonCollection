@@ -94,7 +94,7 @@ function addPokemon(pokemon) {
 }
 
 function saveCard(card) {
-	cards.push(card);
+	cards.unshift(card);
 	displayCards(cards);
 }
 
