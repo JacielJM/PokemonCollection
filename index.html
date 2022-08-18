@@ -25,7 +25,7 @@
 	<div id="app" class="container-fluid">
 		<h1 id="titulo" class="text-dark text-center fw-bold bg-light bg-opacity-75 rounded p-3">Pokémon
 			Gallery</h1>
-		<div class="container">
+		<div class="container-fluid">
 			<!-- input -->
 			<div class="input-group mb-3">
 				<input id="busqueda" type="text" class="form-control" placeholder="Nombre o ID" required />
@@ -33,14 +33,14 @@
 					Go!
 				</button>
 			</div>
-			<div class="d-flex justify-content-start container-fluid mx-auto">
-				<button class="btn btn-outline-success mb-3 me-2" type="button" id="resetCards">
+			<div class="d-flex justify-content-start container-fluid mx-auto mx-sm-0">
+				<button class="btn btn-outline-success mb-gd-3 me-2 ms-sm-0" type="button" id="resetCards">
 					Reset cards
 				</button>
-				<button class="btn btn-outline-info mb-3 mx-2" type="button" id="resetColors">
+				<button class="btn btn-outline-info mb-gd-3 mx-2" type="button" id="resetColors">
 					Reset colors
 				</button>
-				<button class="btn btn-outline-danger mb-3 mx-2" type="button" id="resetAll">
+				<button class="btn btn-outline-danger mb-gd-3 mx-2" type="button" id="resetAll">
 					Reset All
 				</button>
 			</div>
@@ -49,7 +49,8 @@
 				<label class="form-check-label" for="randomColors"> Colores random</label>
 			</div>
 		</div>
-		<p class="col-6 mx-auto text-center text-light bg-dark bg-opacity-10 rounded p-3"><span id="alert">Atrápalos a
+		<p class="col-sm-12 col-md-6 mx-auto text-center text-light bg-dark bg-opacity-10 rounded p-md-3"><span
+				id="alert">Atrápalos a
 				todos!</span>
 		</p>
 		<div id="gallery" class="row row-cols-1 row-cols-md-4 g-4 p-3">
